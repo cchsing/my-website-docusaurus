@@ -5,12 +5,14 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Justins\'s Site',
+  title: 'Justin Chong',
   tagline: 'OpenTelemetry, Observability, DevOps, and Automation',
   favicon: 'img/favicon.ico',
 
@@ -51,6 +53,8 @@ const config = {
           // Remove this to remove the "edit this page" links.
           // editUrl:
           //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         blog: {
           showReadingTime: true,
@@ -66,6 +70,8 @@ const config = {
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -89,28 +95,60 @@ const config = {
           src: 'img/my-pic.jpg',
         },
         items: [
+          // Service
           {
-            type: 'docSidebar',
-            sidebarId: 'documentSidebar',
+            type: 'dropdown',
+            label: 'Service', // Category title
             position: 'left',
-            label: 'Documentation',
+            items: [
+              {
+                label: 'Consultation',
+                to: '/service/consultation',
+              },
+              {
+                label: 'Dashboard',
+                to: '/service/dashboard',
+              },
+              {
+                label: 'Automation',
+                to: '/service/automation',
+              },
+              {
+                label: 'Infrastructure',
+                to: '/service/infrastructure'
+              }
+            ],
           },
+          // Project
           {
             type: 'docSidebar',
             sidebarId: 'projectSidebar',
             position: 'left',
             label: 'Project',
           },
+          // Documentation
+          {
+            type: 'docSidebar',
+            sidebarId: 'documentSidebar',
+            position: 'left',
+            label: 'Documentation',
+          },
+          // Tutorial
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // Blog
           {
-            href: 'https://github.com/cchsing',
-            label: 'GitHub',
+            to: '/blog', 
+            label: 'Blog', 
+            position: 'left'
+          },
+          {
+            href: 'https://linkedin.com/in/chchong5679',
+            label: 'LinkedIn',
             position: 'right',
           },
         ],
@@ -119,16 +157,49 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Service',
             items: [
               {
+                label: 'Consultation',
+                to: '/service/consultation',
+              },
+              {
+                label: 'Dashboard',
+                to: '/service/dashboard',
+              },
+              {
+                label: 'Automation',
+                to: '/service/automation',
+              },
+              {
+                label: 'Insfrastructure',
+                to: '/service/infrastructure',
+              },
+            ]
+          },
+          {
+            title: 'Navigation',
+            items: [
+              {
+                label: 'Documentation',
+                to: '/docs/documentation/introduction',
+              },
+              {
+                label: 'Project',
+                to: '/docs/project/introduction',
+              },
+              {
                 label: 'Tutorial',
-                to: '/tutorial/intro',
+                to: '/docs/tutorial/introduction',
+              },
+              {
+                label: 'Blog',
+                to: '/blog',
               },
             ],
           },
           {
-            title: 'Social Medias',
+            title: 'Links',
             items: [
               {
                 label: 'LinkedIn',
@@ -137,19 +208,10 @@ const config = {
               {
                 label: 'Instagram',
                 href: 'https://www.instagram.com/chc5679/',
-              }
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/cchsing/my-website',
+                href: 'https://github.com/cchsing',
               },
             ],
           },
@@ -159,8 +221,27 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: [
+          'powershell',
+          'splunk-spl',
+          'bash',
+          'yaml',
+          'ini',
+          'systemd',
+          'sql',
+          'docker', 
+          'regex',
+          'json',
+          'csv',
+        ],
       },
     }),
+  
+  markdown: {
+    mermaid: true,
+  },
+
+  themes: ['@docusaurus/theme-mermaid'],
 };
 
 export default config;

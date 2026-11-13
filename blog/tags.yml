@@ -1,19 +1,29 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
-
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
-
 docusaurus:
   label: Docusaurus
   permalink: /docusaurus
   description: Docusaurus tag description
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+opentelemetry:
+  label: opentelemetry
+  permalink: /opentelemetry
+  description: OpenTelemetry
+
+kafka:
+  label: kafka
+  permalink: /kafka
+  description: kafka
+
+grafana:
+  label: grafana
+  permalink: /grafana
+  description: grafana
+
+ansible:
+  label: ansible
+  permalink: /ansible
+  description: ansible
+
+splunk:
+  label: splunk
+  permalink: /splunk
+  description: splunk

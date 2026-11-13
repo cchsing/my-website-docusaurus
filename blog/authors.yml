@@ -1,25 +1,12 @@
-yangshun:
-  name: Yangshun Tay
-  title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
-  url: https://linkedin.com/in/yangshun
-  image_url: https://github.com/yangshun.png
+justinchong:
+  name: Justin Chong
+  title: Senior Infrastructure Engineer at DHL IT Services
+  url: https://linkedin.com/in/chchong5679
+  image_url: https://github.com/cchsing.png
   page: true
   socials:
-    x: yangshunz
-    linkedin: yangshun
-    github: yangshun
-    newsletter: https://www.greatfrontend.com
-
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+    linkedin: chchong5679
+    github: cchsing
+    instagram: chc5679
+    facebook: https://www.facebook.com/chc5679
+    whatsapp: https://wa.me/60135836818

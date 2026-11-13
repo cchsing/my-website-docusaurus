@@ -1,11 +1,73 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+// import ThemedImage from '@theme/ThemedImage';
 
 const FeatureList = [
   {
     title: 'OpenTelemetry',
     Svg: require('@site/static/img/OpenTelemetry.svg').default,
+    description: (
+      <>
+        Experienced in OpenTelemetry and related implementation. OpenTelemetry
+        collector and instrumentation for monitoring and observability.
+      </>
+    ),
+  },
+  {
+    title: 'Apache Kafka',
+    Svg: require('@site/static/img/kafka.svg').default,
+    description: (
+      <>
+        Installation and setup of Kafka message queue to support the OpenTelemetry
+        data pipeline and improve the resiliency of OTel collector for large 
+        data volume.
+      </>
+    ),
+  },
+  {
+    title: 'Python',
+    Svg: require('@site/static/img/Python.svg').default,
+    description: (
+      <>
+        Extend or customize your website layout by reusing React. Docusaurus can
+        be extended while reusing the same header and footer.
+      </>
+    ),
+  },
+  {
+    title: 'Splunk',
+    Svg: require('@site/static/img/Splunk.svg').default,
+    description: (
+      <>
+        Docusaurus was designed from the ground up to be easily installed and
+        used to get your website up and running quickly.
+      </>
+    ),
+  },
+  {
+    title: 'Dynatrace',
+    Svg: require('@site/static/img/Dynatrace.svg').default,
+    description: (
+      <>
+        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
+        ahead and move your docs into the <code>docs</code> directory.
+      </>
+    ),
+  },
+  {
+    title: 'Powered by React',
+    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    description: (
+      <>
+        Extend or customize your website layout by reusing React. Docusaurus can
+        be extended while reusing the same header and footer.
+      </>
+    ),
+  },
+  {
+    title: 'Splunk',
+    Svg: require('@site/static/img/Splunk.svg').default,
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -34,8 +96,8 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Splunk',
+    Svg: require('@site/static/img/Splunk.svg').default,
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -67,7 +129,7 @@ const FeatureList = [
 
 function Feature({Svg, title, description}) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx('col col--3')}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>
@@ -78,6 +140,26 @@ function Feature({Svg, title, description}) {
     </div>
   );
 }
+// function Feature({title, Svg, description}) {
+//   return (
+//     <div className="col col--3">
+//       <div className="text--center">
+//         <ThemedImage
+//           alt={title}
+//           sources={{
+//             light: Svg.light,
+//             dark: Svg.dark,
+//           }}
+//           className="feature-svg"
+//         />
+//       </div>
+//       <div className="text--center padding-horiz--md">
+//         <h3>{title}</h3>
+//         <p>{description}</p>
+//       </div>
+//     </div>
+//   );
+// }
 
 export default function HomepageFeatures() {
   return (
